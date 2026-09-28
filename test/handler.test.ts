@@ -2,9 +2,11 @@ import { resetShutdownState } from '../src/lifecycle';
 
 // Mock koatty 模块的 createApplication
 const mockCreateApplication = jest.fn();
+// virtual: koatty is fully mocked here; on CI's strict pnpm layout
+// jest-resolve cannot stage the real module for mocking
 jest.mock('koatty', () => ({
   createApplication: (...args: any[]) => mockCreateApplication(...args),
-}));
+}), { virtual: true });
 
 // 必须在 jest.mock 之后 import，确保拿到的是 mock 版本
 import { createHandler } from '../src/handler';
