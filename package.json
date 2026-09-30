@@ -55,6 +55,7 @@
     }
   ],
   "devDependencies": {
+    "koatty": "workspace:*",
     "@microsoft/api-documenter": "^7.26.x",
     "@microsoft/api-extractor": "^7.52.x",
     "@types/jest": "^29.5.x",
