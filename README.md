@@ -2,6 +2,8 @@
 
 Serverless adapter for Koatty framework - deploy to AWS Lambda, Alibaba Cloud FC, Tencent SCF.
 
+> **v6.0**: compatible with the koatty 5.0.0 release family (`koatty@^5.0.0` peer); the host `koatty` package is a devDependency so the monorepo build graph produces its types first.
+
 ## Installation
 
 ```bash
